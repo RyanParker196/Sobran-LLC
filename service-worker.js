@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Sobran-LLC/precache-manifest.052e88d6e97eca1b5e40d8d920d9484f.js"
+  "/Sobran-LLC/precache-manifest.5aefd95e3fd1f74aef7cc31699856a13.js"
 );
 
 self.addEventListener('message', (event) => {
