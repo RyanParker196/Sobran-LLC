@@ -51,15 +51,15 @@ export default class App extends Component {
           </Container>
 
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/Sobran-LLC/">
               <Home />
             </Route>
-            <Route path="/Investing">
+            <Route path="/Sobran-LLC/Investing/">
               <Investing />
             </Route>
-            <Route path="/DankTesla">
+            {/* <Route path="Sobran-LLC/DankTesla">
               <Dashboard />
-            </Route>
+            </Route> */}
           </Switch>
         </div>
       </Router>
@@ -82,14 +82,6 @@ function Investing() {
   return (
     <div>
       <Accordion />
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>DankTesla</h2>
     </div>
   );
 }
