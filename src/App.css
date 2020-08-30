@@ -12,9 +12,6 @@
   background-attachment: fixed;
   min-height: 1500px;
 }
-.App {
-  height: 100%;
-}
 .navbar {
   max-width: fit-content;
   text-align: center;
@@ -25,7 +22,8 @@
   border-radius: 55px;
   background-color: grey;
 }
-
-.navbar-nav {
-  text-align: center;
+.accordion {
+  width: 85%;
+  margin: auto;
+  padding: 10px;
 }

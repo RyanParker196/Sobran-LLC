@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import Accordion from './components/Accordion'
 import Nav from './components/Nav'
 import logo from './images/logo.png'
+import spanky from './images/spanky.png'
 
 import {
   Container,
@@ -18,14 +20,6 @@ import {
 
 import './App.css'
 import './custom.scss';
-// This site has 3 pages, all of which are rendered
-// dynamically in the browser (not server rendered).
-//
-// Although the page does not ever refresh, notice how
-// React Router keeps the URL up to date as you navigate
-// through the site. This preserves the browser history,
-// making sure things like the back button and bookmarks
-// work properly.
 
 export default class App extends Component {
   render() {
@@ -47,8 +41,12 @@ export default class App extends Component {
               </Col>
               <Col>
                 <Nav />
+
+                {/* empty col for spacing */}
               </Col>
-              <Col />
+              <Col>
+
+              </Col>
             </Row>
           </Container>
 
@@ -75,14 +73,15 @@ export default class App extends Component {
 function Home() {
   return (
     <div >
-      <h2>Home</h2>
+      <h2 style={{color: "white"}}>Did someone say JEWISH CEMETARY?!?</h2>
+      <Image src={ spanky } rounded style={{border: "5px solid #555"}} />
     </div>
   );
 }
 function Investing() {
   return (
     <div>
-      <h2>Investing</h2>
+      <Accordion />
     </div>
   );
 }
