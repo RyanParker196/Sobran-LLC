@@ -1,13 +1,23 @@
 import React, { Component } from "react";
-import './App.css'
-import Background from './images/background.jpg'
+import Nav from './components/Nav'
+import logo from './images/logo.png'
+
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+} from "react-bootstrap"
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  // Link
 } from "react-router-dom";
 
+import './App.css'
+import './custom.scss';
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
 //
@@ -21,27 +31,7 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <div className="BigDiv"
-          style={{
-            backgroundImage: `url(${Background})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/Investing">Investing</Link>
-            </li>
-            <li>
-              <Link to="/DankTesla">Dashboard</Link>
-            </li>
-          </ul>
-
-          <hr />
+        <div className="BigDiv">
 
           {/*
           A <Switch> looks through all its children <Route>
@@ -50,6 +40,18 @@ export default class App extends Component {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
+          <Container>
+            <Row>
+              <Col>
+                <Image src={logo} rounded />
+              </Col>
+              <Col>
+                <Nav />
+              </Col>
+              <Col />
+            </Row>
+          </Container>
+
           <Switch>
             <Route exact path="/">
               <Home />

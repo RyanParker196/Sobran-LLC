@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+  font-size: large;
+}
 .BigDiv {
   background-image: url("./images/background.jpg");
   background-repeat: no-repeat;
@@ -10,4 +14,18 @@
 }
 .App {
   height: 100%;
+}
+.navbar {
+  max-width: fit-content;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+  border-radius: 55px;
+  background-color: grey;
+}
+
+.navbar-nav {
+  text-align: center;
 }
