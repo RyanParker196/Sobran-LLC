@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import './App.css'
+import Background from './images/background.jpg'
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,45 +17,54 @@ import {
 // making sure things like the back button and bookmarks
 // work properly.
 
-export default function BasicExample() {
-  return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/Investing">Investing</Link>
-          </li>
-          <li>
-            <Link to="/DankTesla">Dashboard</Link>
-          </li>
-        </ul>
+export default class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="BigDiv"
+          style={{
+            backgroundImage: `url(${Background})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/Investing">Investing</Link>
+            </li>
+            <li>
+              <Link to="/DankTesla">Dashboard</Link>
+            </li>
+          </ul>
 
-        <hr />
+          <hr />
 
-        {/*
+          {/*
           A <Switch> looks through all its children <Route>
           elements and renders the first one whose path
           matches the current URL. Use a <Switch> any time
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/Investing">
-            <Investing />
-          </Route>
-          <Route path="/DankTesla">
-            <Dashboard />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/Investing">
+              <Investing />
+            </Route>
+            <Route path="/DankTesla">
+              <Dashboard />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
 // You can think of these components as "pages"
@@ -62,12 +72,11 @@ export default function BasicExample() {
 
 function Home() {
   return (
-    <div>
+    <div >
       <h2>Home</h2>
     </div>
   );
 }
-
 function Investing() {
   return (
     <div>
